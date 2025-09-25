@@ -1,0 +1,441 @@
+---
+import BaseLayout from '../components/BaseLayout.astro';
+const title = "Energías Renovables para Incubación Avícola";
+---
+
+<BaseLayout {title}>
+  <header class="hero">
+    <h1>Soluciones Energéticas Sostenibles para Incubadoras Avícolas</h1>
+    <p class="subtitle">Maximice la eficiencia y reduzca costos con nuestro sistema integrado de energía solar y biogás</p>
+  </header>
+
+  <section class="panel intro">
+    <p>En la industria avícola moderna, la eficiencia energética es clave para mantener la rentabilidad y la sostenibilidad. Nuestra solución combina energía solar térmica, fotovoltaica y biogás para crear un sistema autónomo que reduce significativamente los costos operativos y la huella ambiental de su operación de incubación.</p>
+    
+    <div class="diagrama-destacado">
+      <h3>Vista General del Sistema</h3>
+      <p>Este diagrama interactivo muestra cómo se integran las diferentes fuentes de energía renovable en el proceso de incubación:</p>
+      
+      <div class="diagrama-wrapper">
+        <div class="diagrama-leyenda">
+          <div class="leyenda-item">
+            <span class="color-marker" style="background: #f1c40f;"></span>
+            <span>Energía Solar</span>
+          </div>
+          <div class="leyenda-item">
+            <span class="color-marker" style="background: #27ae60;"></span>
+            <span>Biogás</span>
+          </div>
+          <div class="leyenda-item">
+            <span class="color-marker" style="background: #e74c3c;"></span>
+            <span>Generación de Calor</span>
+          </div>
+          <div class="leyenda-item">
+            <span class="color-marker" style="background: #3498db;"></span>
+            <span>Incubación Controlada</span>
+          </div>
+        </div>
+        
+        <div class="diagrama-container">
+          <img src="/diagrama-proyecto.svg" alt="Diagrama del sistema de energías renovables para incubación avícola" class="diagrama-imagen" />
+          <p class="diagrama-nota">Haz clic en los elementos para obtener más información sobre cada componente del sistema.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="secciones">
+    
+    <p class="seccion-descripcion">Explore nuestra guía completa sobre el uso de energías renovables en incubación avícola:</p>
+    
+    <div class="tarjetas">
+      <a href="/1-introduccion" class="tarjeta">
+        <div class="numero">1</div>
+        <h3>Introducción</h3>
+        <p>El desafío energético en la avicultura y nuestra solución integrada de energías renovables.</p>
+        <span class="enlace">Ver más →</span>
+      </a>
+      
+      <a href="/2-sistema" class="tarjeta">
+        <div class="numero">2</div>
+        <h3>Sistema Integrado</h3>
+        <p>Arquitectura detallada del sistema combinado de energía solar y biogás para incubación.</p>
+        <span class="enlace">Ver más →</span>
+      </a>
+      
+      <a href="/3-beneficios" class="tarjeta">
+        <div class="numero">3</div>
+        <h3>Beneficios y Resultados</h3>
+        <p>Ventajas económicas, ambientales y productivas de implementar nuestra solución.</p>
+        <span class="enlace">Ver más →</span>
+      </a>
+    </div>
+  </section>
+  
+  <section class="panel caracteristicas">
+    <h2>Características Clave</h2>
+    <div class="grid-caracteristicas">
+      <div class="caracteristica">
+        <div class="icono">☀️</div>
+        <h3>Energía Solar</h3>
+        <p>Aprovechamiento de la radiación solar para generación de calor y electricidad.</p>
+      </div>
+      
+      <div class="caracteristica">
+        <div class="icono">♻️</div>
+        <h3>Biogás</h3>
+        <p>Valorización de residuos orgánicos para producción de energía limpia.</p>
+      </div>
+      
+      <div class="caracteristica">
+        <div class="icono">📊</div>
+        <h3>Control Inteligente</h3>
+        <p>Monitoreo y gestión automatizada de todos los parámetros del sistema.</p>
+      </div>
+      
+      <div class="caracteristica">
+        <div class="icono">💰</div>
+        <h3>Ahorro Garantizado</h3>
+        <p>Reducción de hasta el 60% en costos energéticos.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="panel cta">
+    <h2>¿Listo para transformar su operación avícola?</h2>
+    <p>Descubra cómo nuestro sistema integrado puede hacer su operación más eficiente y sostenible.</p>
+    <div class="botones">
+      <a href="/1-introduccion" class="btn-primario">Comenzar a explorar</a>
+      <a href="#contacto" class="btn-secundario">Solicitar información</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, #2c6f4f 0%, #3498db 100%);
+    color: white;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.2rem;
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .intro {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto 3rem auto;
+  }
+  
+  .diagrama-destacado {
+    margin-top: 2.5rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  }
+  
+  .diagrama-destacado h3 {
+    color: #2c6f4f;
+    margin-top: 0;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .diagrama-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .diagrama-leyenda {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .leyenda-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    font-size: 0.9rem;
+  }
+  
+  .color-marker {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .diagrama-container {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    overflow: hidden;
+  }
+  
+  .diagrama-imagen {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .diagrama-imagen:hover {
+    transform: scale(1.02);
+  }
+  
+  .diagrama-nota {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-top: 1rem;
+    font-style: italic;
+  }
+  
+  @media (max-width: 768px) {
+    .diagrama-destacado {
+      padding: 1.5rem 1rem;
+    }
+    
+    .leyenda-item {
+      font-size: 0.8rem;
+      padding: 0.4rem 0.8rem;
+    }
+    
+    .diagrama-container {
+      padding: 1rem 0.5rem;
+      overflow-x: auto;
+    }
+    
+    .diagrama-imagen {
+      min-width: 800px;
+    }
+  }
+  
+  .secciones {
+    margin: 4rem 0;
+  }
+  
+  .seccion-descripcion {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    color: #2c3e50;
+  }
+  
+  .tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .tarjeta {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e0e0e0;
+  }
+  
+  .tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  }
+  
+  .tarjeta .numero {
+    background: #2c6f4f;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .tarjeta h3 {
+    margin: 0 0 1rem 0;
+    color: #2c3e50;
+    font-size: 1.4rem;
+  }
+  
+  .tarjeta p {
+    margin: 0 0 1.5rem 0;
+    color: #7f8c8d;
+    flex-grow: 1;
+  }
+  
+  .tarjeta .enlace {
+    color: #2c6f4f;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+  }
+  
+  .caracteristicas {
+    margin: 4rem 0;
+  }
+  
+  .grid-caracteristicas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .caracteristica {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .caracteristica:hover {
+    transform: translateY(-5px);
+  }
+  
+  .caracteristica .icono {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .caracteristica h3 {
+    margin: 0 0 1rem 0;
+    color: #2c3e50;
+  }
+  
+  .caracteristica p {
+    margin: 0;
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .cta {
+    text-align: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    margin: 4rem 0 2rem 0;
+  }
+  
+  .cta h2 {
+    margin: 0 0 1rem 0;
+    color: #2c3e50;
+    font-size: 1.8rem;
+  }
+  
+  .cta p {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    opacity: 0.9;
+  }
+  
+  .botones {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .btn-primario, .btn-secundario {
+    padding: 0.9rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+  
+  .btn-primario {
+    background: #2c6f4f;
+    color: white;
+    border: 2px solid #2c6f4f;
+  }
+  
+  .btn-primario:hover {
+    background: #1e4e39;
+    border-color: #1e4e39;
+    transform: translateY(-2px);
+  }
+  
+  .btn-secundario {
+    background: white;
+    color: #2c6f4f;
+    border: 2px solid #2c6f4f;
+  }
+  
+  .btn-secundario:hover {
+    background: #f0f8f0;
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 1.8rem;
+    }
+    
+    .subtitle {
+      font-size: 1.1rem;
+    }
+    
+    .tarjetas {
+      grid-template-columns: 1fr;
+    }
+    
+    .grid-caracteristicas {
+      grid-template-columns: 1fr;
+    }
+    
+    .botones {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .btn-primario, .btn-secundario {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>

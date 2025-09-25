@@ -1,0 +1,377 @@
+---
+import BaseLayout from '../components/BaseLayout.astro';
+const title = "Beneficios y Resultados";
+---
+
+<BaseLayout {title}>
+  <header>
+    <h1>Beneficios y Resultados</h1>
+    <p>Impacto económico, ambiental y productivo del sistema integrado de energías renovables</p>
+  </header>
+
+  <section class="panel">
+    <h2>Ventajas Competitivas</h2>
+    
+    <div class="beneficios-grid">
+      <div class="beneficio economico">
+        <h3>Económicos</h3>
+        <ul>
+          <li>Reducción del 40-60% en costos energéticos</li>
+          <li>Retorno de inversión: 3-5 años</li>
+          <li>Menor dependencia de combustibles fósiles</li>
+          <li>Subvenciones y beneficios fiscales disponibles</li>
+        </ul>
+      </div>
+      
+      <div class="beneficio ambiental">
+        <h3>Ambientales</h3>
+        <ul>
+          <li>Reducción de hasta 70% en emisiones de CO₂</li>
+          <li>Gestión sostenible de residuos orgánicos</li>
+          <li>Menor huella hídrica</li>
+          <li>Certificaciones de producción sostenible</li>
+        </ul>
+      </div>
+      
+      <div class="beneficio productivo">
+        <h3>Productivos</h3>
+        <ul>
+          <li>Mayor tasa de eclosión (+3-5%)</li>
+          <li>Mejor calidad de los pollitos</li>
+          <li>Mayor uniformidad en las nacedoras</li>
+          <li>Reducción de mortalidad embrionaria</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Resultados Comprobados</h2>
+    
+    <div class="resultados">
+      <div class="grafico-estadisticas">
+        <div class="barra" style="--valor: 85; --color: #2c6f4f;">
+          <span class="etiqueta">Reducción de costos energéticos</span>
+          <span class="valor">85%</span>
+        </div>
+        
+        <div class="barra" style="--valor: 70; --color: #3498db;">
+          <span class="etiqueta">Reducción de emisiones CO₂</span>
+          <span class="valor">70%</span>
+        </div>
+        
+        <div class="barra" style="--valor: 95; --color: #f1c40f;">
+          <span class="etiqueta">Disponibilidad del sistema</span>
+          <span class="valor">95%</span>
+        </div>
+        
+        <div class="barra" style="--valor: 5; --color: #e67e22;">
+          <span class="etiqueta">Retorno de inversión (años)</span>
+          <span class="valor">3-5</span>
+        </div>
+      </div>
+      
+      <div class="caso-exito">
+        <h3>Estudio de Caso: Granja Avícola Modelo</h3>
+        <div class="datos-caso">
+          <div class="dato">
+            <span class="cifra">50,000</span>
+            <span class="descripcion">Huevos incubados/mes</span>
+          </div>
+          <div class="dato">
+            <span class="cifra">42%</span>
+            <span class="descripcion">Ahorro energético</span>
+          </div>
+          <div class="dato">
+            <span class="cifra">92%</span>
+            <span class="descripcion">Tasa de eclosión</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Implementación y Próximos Pasos</h2>
+    
+    <div class="pasos">
+      <div class="paso">
+        <div class="numero">1</div>
+        <div class="contenido">
+          <h3>Análisis de Viabilidad</h3>
+          <p>Evaluación del sitio, consumo energético y recursos disponibles</p>
+        </div>
+      </div>
+      
+      <div class="paso">
+        <div class="numero">2</div>
+        <div class="contenido">
+          <h3>Diseño Personalizado</h3>
+          <p>Desarrollo de la solución adaptada a sus necesidades específicas</p>
+        </div>
+      </div>
+      
+      <div class="paso">
+        <div class="numero">3</div>
+        <div class="contenido">
+          <h3>Instalación y Puesta en Marcha</h3>
+          <p>Implementación por parte de técnicos especializados</p>
+        </div>
+      </div>
+      
+      <div class="paso">
+        <div class="numero">4</div>
+        <div class="contenido">
+          <h3>Soporte y Mantenimiento</h3>
+          <p>Acompañamiento continuo para garantizar el máximo rendimiento</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="llamado-accion">
+      <h3>¿Listo para transformar su operación avícola?</h3>
+      <p>Contáctenos para una evaluación sin costo de su proyecto</p>
+      <a href="#contacto" class="btn-contacto">Solicitar Información</a>
+    </div>
+  </section>
+
+  <nav class="paginacion">
+    <a href="/2-sistema" class="btn">Anterior: Sistema Integrado</a>
+    <a href="/" class="btn">Volver al Inicio</a>
+  </nav>
+</BaseLayout>
+
+<style>
+  .beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  .beneficio {
+    padding: 1.5rem;
+    border-radius: 10px;
+    color: white;
+  }
+  
+  .beneficio h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+  }
+  
+  .beneficio ul {
+    padding-left: 1.2rem;
+  }
+  
+  .beneficio li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  
+  .beneficio li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+  }
+  
+  .economico {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  }
+  
+  .ambiental {
+    background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+  }
+  
+  .productivo {
+    background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+  }
+  
+  .grafico-estadisticas {
+    margin: 2rem 0;
+  }
+  
+  .barra {
+    height: 40px;
+    background: linear-gradient(90deg, var(--color) 0%, var(--color) calc(var(--valor) * 1%), #f0f0f0 calc(var(--valor) * 1%), #f0f0f0 100%);
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .barra .etiqueta {
+    flex-grow: 1;
+    color: white;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    z-index: 1;
+  }
+  
+  .barra .valor {
+    background: white;
+    padding: 0.2rem 0.8rem;
+    border-radius: 15px;
+    font-weight: bold;
+    color: var(--color);
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .caso-exito {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  .datos-caso {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .dato {
+    text-align: center;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .cifra {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2c6f4f;
+    line-height: 1.2;
+  }
+  
+  .descripcion {
+    font-size: 0.9rem;
+    color: #2c3e50;
+  }
+  
+  .pasos {
+    margin: 2rem 0;
+  }
+  
+  .paso {
+    display: flex;
+    margin-bottom: 1.5rem;
+    align-items: flex-start;
+  }
+  
+  .numero {
+    background: #2c6f4f;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    margin-top: 0.3rem;
+  }
+  
+  .contenido h3 {
+    margin: 0 0 0.5rem 0;
+    color: #2c3e50;
+  }
+  
+  .contenido p {
+    margin: 0;
+    color: #7f8c8d;
+  }
+  
+  .llamado-accion {
+    text-align: center;
+    background: #f0f8f0;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+  }
+  
+  .llamado-accion h3 {
+    color: #2c6f4f;
+    margin-top: 0;
+  }
+  
+  .btn-contacto {
+    display: inline-block;
+    background: #2c6f4f;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid #2c6f4f;
+  }
+  
+  .btn-contacto:hover {
+    background: white;
+    color: #2c6f4f;
+  }
+  
+  /* Estilos de navegación */
+  .paginacion {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .btn {
+    background: #2c6f4f;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background: #1e4e39;
+  }
+  
+  @media (max-width: 768px) {
+    .paginacion {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .btn {
+      text-align: center;
+      display: block;
+      width: 100%;
+    }
+    
+    .beneficios-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .barra {
+      flex-direction: column;
+      height: auto;
+      padding: 0.8rem;
+      text-align: center;
+    }
+    
+    .barra .etiqueta {
+      margin-bottom: 0.5rem;
+    }
+  }
+</style>

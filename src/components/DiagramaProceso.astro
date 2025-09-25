@@ -1,0 +1,37 @@
+---
+---
+<svg viewBox="0 0 900 420" aria-label="Diagrama de proceso: solar y biogás -> caldera -> incubadora" role="img">
+  <defs>
+    <marker id="flecha" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L0,12 L12,6 z" fill="#34495e" />
+    </marker>
+    <style>
+      .t { fill: #2c3e50; font: 14px/1.2 system-ui, sans-serif; }
+      .box { rx: 10; ry: 10; }
+    </style>
+  </defs>
+
+  <!-- Paneles Solares -->
+  <rect x="40" y="280" width="150" height="80" class="box" fill="#3498db" />
+  <text x="40" y="270" class="t">Paneles Solares</text>
+
+  <!-- Biodigestor -->
+  <rect x="40" y="140" width="150" height="90" class="box" fill="#2ecc71" />
+  <text x="40" y="130" class="t">Biodigestor (Biogás)</text>
+
+  <!-- Flechas hacia caldera -->
+  <line x1="190" y1="185" x2="350" y2="210" stroke="#34495e" stroke-width="3" marker-end="url(#flecha)" />
+  <line x1="115" y1="280" x2="350" y2="250" stroke="#34495e" stroke-width="3" marker-end="url(#flecha)" />
+
+  <!-- Caldera / Sistema de Vapor -->
+  <rect x="350" y="180" width="160" height="120" class="box" fill="#e67e22" />
+  <text x="350" y="170" class="t">Caldera / Generador de Vapor</text>
+
+  <!-- Salida de vapor hacia incubadora -->
+  <line x1="510" y1="240" x2="720" y2="240" stroke="#34495e" stroke-width="3" marker-end="url(#flecha)" />
+  <text x="560" y="230" class="t">Vapor / Calor</text>
+
+  <!-- Incubadora -->
+  <rect x="720" y="200" width="160" height="120" class="box" fill="#ecf0f1" stroke="#7f8c8d" />
+  <text x="720" y="190" class="t">Incubadora Avícola</text>
+</svg>

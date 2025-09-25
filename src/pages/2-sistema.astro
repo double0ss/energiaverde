@@ -1,0 +1,267 @@
+---
+import BaseLayout from '../components/BaseLayout.astro';
+const title = "Sistema Integrado de Energías Renovables";
+---
+
+<BaseLayout {title}>
+  <header>
+    <h1>Sistema Integrado de Energías Renovables</h1>
+    <p>Optimización del consumo energético en incubadoras avícolas de gran escala</p>
+  </header>
+
+  <section class="panel">
+    <h2>Arquitectura del Sistema</h2>
+    <p>Nuestra solución combina tres fuentes de energía renovable en un sistema sinérgico que garantiza la máxima eficiencia y disponibilidad:</p>
+    
+    <div class="diagrama-sistema">
+      <div class="fuente-energia solar-termica">
+        <h3>Energía Solar Térmica</h3>
+        <ul>
+          <li>Colectores solares de tubos al vacío (eficiencia 75-80%)</li>
+          <li>Almacenamiento térmico en tanques aislados</li>
+          <li>Capacidad: 500-1000 litros por cada 1000 huevos</li>
+        </ul>
+        <div class="estadistica">Aporta ~40% de la energía térmica necesaria</div>
+      </div>
+      
+      <div class="conexion">↓</div>
+      
+      <div class="sistema-central">
+        <div class="caldera">
+          <h3>Caldera Híbrida</h3>
+          <ul>
+            <li>Combustible dual: biogás/gas natural</li>
+            <li>Potencia: 100-500 kW según capacidad</li>
+            <li>Eficiencia térmica > 95%</li>
+          </ul>
+        </div>
+        
+        <div class="generacion-vapor">
+          <h4>Generación de Vapor</h4>
+          <ul>
+            <li>Temperatura controlada: 105-120°C</li>
+            <li>Presión: 1-2 bar</li>
+            <li>Distribución mediante red aislada</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="conexion">→</div>
+      
+      <div class="incubadora">
+        <h3>Incubadora Avícola</h3>
+        <ul>
+          <li>Control automático de temperatura (±0.1°C)</li>
+          <li>Humedad controlada (±2% HR)</li>
+          <li>Ventilación optimizada</li>
+          <li>Voltaje de respaldo: 24V DC</li>
+        </ul>
+      </div>
+      
+      <div class="fuente-energia solar-fotovoltaica">
+        <h3>Energía Solar Fotovoltaica</h3>
+        <ul>
+          <li>Paneles de 450-550 Wp</li>
+          <li>Sistema de baterías de litio</li>
+          <li>Inversor híbrido con respaldo de red</li>
+        </ul>
+        <div class="estadistica">Cubre 60-80% del consumo eléctrico</div>
+      </div>
+      
+      <div class="fuente-energia biogas">
+        <h3>Biogás</h3>
+        <ul>
+          <li>Producción: 0.5-1 m³/kg residuo</li>
+          <li>Contenido de metano: 55-70%</li>
+          <li>Sistema de limpieza y almacenamiento</li>
+        </ul>
+        <div class="estadistica">Ahorro de hasta 30% en combustible</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Control y Monitoreo Inteligente</h2>
+    <p>Sistema SCADA para la gestión integral de la energía y parámetros de incubación:</p>
+    
+    <div class="caracteristicas-control">
+      <div class="caracteristica">
+        <div class="icono">📊</div>
+        <h4>Monitoreo en Tiempo Real</h4>
+        <p>Visualización de todos los parámetros críticos del sistema</p>
+      </div>
+      
+      <div class="caracteristica">
+        <div class="icono">⚡</div>
+        <h4>Gestión de Energía</h4>
+        <p>Optimización automática del uso de fuentes energéticas</p>
+      </div>
+      
+      <div class="caracteristica">
+        <div class="icono">📱</div>
+        <h4>Control Remoto</h4>
+        <p>Acceso y control desde dispositivos móviles</p>
+      </div>
+      
+      <div class="caracteristica">
+        <div class="icono">🔋</div>
+        <h4>Backup Automático</h4>
+        <p>Conmutación sin interrupciones a respaldo de red</p>
+      </div>
+    </div>
+  </section>
+
+  <nav class="paginacion">
+    <a href="/1-introduccion" class="btn">Anterior: Introducción</a>
+    <a href="/3-beneficios" class="btn">Siguiente: Beneficios y Resultados</a>
+  </nav>
+</BaseLayout>
+
+<style>
+  .diagrama-sistema {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  @media (min-width: 1024px) {
+    .diagrama-sistema {
+      grid-template-columns: 1fr 1.5fr 1fr;
+      grid-template-rows: auto auto auto;
+      grid-template-areas:
+        "solar-termica sistema-central solar-fotovoltaica"
+        "biogas sistema-central ."
+        ". incubadora .";
+    }
+    
+    .solar-termica { grid-area: solar-termica; }
+    .solar-fotovoltaica { grid-area: solar-fotovoltaica; }
+    .biogas { grid-area: biogas; }
+    .sistema-central { grid-area: sistema-central; }
+    .incubadora { 
+      grid-area: incubadora; 
+      max-width: 80%;
+      margin: 0 auto;
+    }
+    
+    .conexion {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #2c6f4f;
+    }
+  }
+  
+  .fuente-energia, .sistema-central, .incubadora {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-top: 4px solid #2c6f4f;
+  }
+  
+  .solar-termica { border-color: #3498db; }
+  .solar-fotovoltaica { border-color: #f1c40f; }
+  .biogas { border-color: #27ae60; }
+  
+  .sistema-central {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  }
+  
+  .caldera, .generacion-vapor {
+    background: white;
+    padding: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  
+  .estadistica {
+    background: #e8f8f0;
+    color: #2c6f4f;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    font-weight: 600;
+  }
+  
+  .caracteristicas-control {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .caracteristica {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .icono {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Estilos de navegación */
+  .paginacion {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .btn {
+    background: #2c6f4f;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    text-align: center;
+  }
+  
+  .btn:hover {
+    background: #1e4e39;
+  }
+  
+  @media (max-width: 768px) {
+    .caracteristicas-control {
+      grid-template-columns: 1fr;
+    }
+    
+    .paginacion {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .btn {
+      display: block;
+      width: 100%;
+    }
+  }
+  
+  h3, h4 {
+    color: #2c3e50;
+    margin-top: 0;
+  }
+  
+  ul {
+    padding-left: 1.2rem;
+  }
+  
+  li {
+    margin-bottom: 0.5rem;
+  }
+</style>
